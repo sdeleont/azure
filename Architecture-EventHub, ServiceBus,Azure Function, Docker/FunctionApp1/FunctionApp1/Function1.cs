@@ -26,7 +26,7 @@ namespace FunctionApp1
                     // Replace these two lines with your processing logic.
                     log.LogInformation($"C# Event Hub trigger function processed a message: {eventData.EventBody}");
                     serviceBusQueue.Add(eventData.EventBody.ToString());
-                    log.LogInformation($"Enviando mensaje al Service Bus:" + eventData.EventBody.ToString());
+                    log.LogInformation($"Sending message to service bus:" + eventData.EventBody.ToString());
                     await Task.Yield();
                 }
                 catch (Exception e)
